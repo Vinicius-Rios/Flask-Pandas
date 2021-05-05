@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+<html>
+    <head>
+    {% block cabeçario%}
+    <style>
+        #cont1{
+            margin: auto;
+            width: 50%;
+            height: 50%;
+            padding: 10px
+        }
+    </style>
+    {% endblock %}
+    </head>
+    <body>
+    {% block corpo %} 
+    <div class="container" id="cont1">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="author" class="form-label">Título</label>
+              <input type="text" class="form-control" id="author" name="author">
+            </div>
+            <div class="mb-3">
+              <label for="intro" class="form-label">Introdução</label>
+              <textarea class="form-control" id="intro" name="intro" rows="3"></textarea>
+              <div id="introHelp" class="form-text">Pequena descrição sobre a área de atuação.</div>
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Conteúdo</label>
+                <textarea class="form-control" id="content" name="content" rows="8"></textarea>
+                <div id="contentHelp" class="form-text">Desenvolvimento em detalhes sobre os dados.</div>
+            </div>
+            <div class="mb-3">
+                <label for="planilha" class="form-label">Planilha</label>
+                <input class="form-control form-control-sm" id="planilha" name="planilha" type="file" accept=".csv">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+    </div>
+    {% endblock %}
+    </body>
+</html>

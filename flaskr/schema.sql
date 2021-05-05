@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS formulario;
+
+CREATE TABLE formulario (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  título TEXT NOT NULL,
+  introdução TEXT NOT NULL,
+  conteúdo TEXT NOT NULL
+);
